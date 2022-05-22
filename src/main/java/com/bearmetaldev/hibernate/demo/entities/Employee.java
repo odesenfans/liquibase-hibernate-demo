@@ -31,10 +31,18 @@ public class Employee implements Serializable {
 	@Column(name = "last_name", unique = false, nullable = false, length = 100)
 	private String lastName;
 
-	public Employee(String email, String firstName, String lastName) {
+	@Column(name = "salary", unique = false, nullable = false)
+	private int salary;
+
+	public Employee(String email, String firstName, String lastName, int salary) {
 		this.email = email;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.salary = salary;
+	}
+
+	public Employee()
+	{
 	}
 
 	public Integer getEmployeeId() {

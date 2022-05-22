@@ -7,7 +7,7 @@ import org.hibernate.Transaction;
 public class HibernateDemo {
 
     public static void main(String[] args) {
-        String dbEngine = "h2";
+        String dbEngine = "postgres";
         if (args.length > 0) {
             dbEngine = args[0];
         }
@@ -18,7 +18,8 @@ public class HibernateDemo {
             transaction = session.beginTransaction();
 
             // Add new Employee object
-            Employee employee = new Employee("olivier.desenfans@bearmetaldev.com", "Olivier", "Desenfans");
+            int salary = 10000;     // Business is not so good lately
+            Employee employee = new Employee("olivier.desenfans@bearmetaldev.com", "Olivier", "Desenfans", salary);
 
             session.persist(employee);
             transaction.commit();

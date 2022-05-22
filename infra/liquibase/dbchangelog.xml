@@ -10,4 +10,3 @@
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.xsd">
     <include file="scripts/0001_create_employees.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
-
